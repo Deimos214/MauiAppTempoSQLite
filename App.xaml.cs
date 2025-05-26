@@ -2,14 +2,33 @@
 {
     public partial class App : Application
     {
-        public App()
+        public partial class App : Application
         {
-            InitializeComponent();
-        }
+            static SQLiteDatabaseHelper _db;
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
+            public static SQLiteDatabaseHelper Db
+            {
+                get
+                {
+                    if (_db == null)
+                    {
+                        string path = Path.Combine(
+                            Environment.GetFolderPath(
+                                Environment.SpecialFolder.LocalApplicationData),
+                            "banco_sqlite_tempo.db3");
+
+                        _db = new SQLiteDatabaseHelper(path);
+                    }
+
+                    return _db;
+                }
+            }
+
+            public App()
+            {
+                InitializeComponent();
+
+                MainPage = new AppShell();
+            }
         }
     }
-}
