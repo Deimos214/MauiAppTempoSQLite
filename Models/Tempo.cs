@@ -6,6 +6,7 @@ namespace MauiAppTempoSQLite.Models
     internal class Tempo
     {
         [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public double? lon { get; set; }
         public double? lat { get; set; }
         public double? temp_min { get; set; }
@@ -16,5 +17,7 @@ namespace MauiAppTempoSQLite.Models
         public string? description { get; set; }
         public string? sunrise { get; set; }
         public string? sunset { get; set; }
+        public string? Cidade { get; set; }
+        public DateTime DataConsulta { get; set; }
     }
 }

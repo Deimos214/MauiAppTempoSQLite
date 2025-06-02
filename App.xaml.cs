@@ -1,9 +1,11 @@
-﻿namespace MauiAppTempoSQLite
+﻿using MauiAppTempoSQLite.Helpers;
+
+namespace MauiAppTempoSQLite
 {
     public partial class App : Application
     {
-        public partial class App : Application
-        {
+       
+        
             static SQLiteDatabaseHelper _db;
 
             public static SQLiteDatabaseHelper Db
