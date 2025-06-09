@@ -1,6 +1,6 @@
 ﻿using MauiAppTempoSQLite.Models;
 using System.Collections.ObjectModel;
-
+using MauiAppTempoSQLite.Services;
 namespace MauiAppTempoSQLite
 {
     public partial class MainPage : ContentPage

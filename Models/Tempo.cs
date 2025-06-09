@@ -3,7 +3,7 @@ using SQLite;
 
 namespace MauiAppTempoSQLite.Models
 {
-    internal class Tempo
+    public class Tempo
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
